@@ -1063,7 +1063,7 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
   bool get wantKeepAlive => widget.focusNode.hasFocus;
 
   Color get _cursorColor =>
-      widget.cursorColor.withOpacity(_cursorBlinkOpacityController.value);
+      widget.cursorColor.withOpacity(double.parse(_cursorBlinkOpacityController.value.toString()));
 
   @override
   bool get cutEnabled => widget.toolbarOptions.cut && !widget.readOnly;
@@ -2263,6 +2263,11 @@ class ExtendedEditableTextState extends State<ExtendedEditableText>
     );
 
     //return TextSpan(style: widget.style, text: text);
+  }
+
+  @override
+  void performPrivateCommand(String action, Map<String, dynamic> data) {
+    // TODO: implement performPrivateCommand
   }
 }
 

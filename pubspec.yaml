@@ -11,7 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  extended_text_library: ^4.0.0
+  extended_text_library:
+    git:
+      url: https://github.com/IgloohomeBaliDev/extended_text_library.git
+      ref: 'ab274183483fc475cb831f657ceaa1d91c69de31'
 
 
 dev_dependencies:

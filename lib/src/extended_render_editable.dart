@@ -374,7 +374,6 @@ class ExtendedRenderEditable extends ExtendedTextSelectionRenderObject {
       ),
       effectiveOffset: effectiveOffset,
       caretPrototype: _caretPrototype,
-      handleSpecialText: handleSpecialText,
     );
 
     // (justinmc): https://github.com/flutter/flutter/issues/31495
@@ -393,7 +392,6 @@ class ExtendedRenderEditable extends ExtendedTextSelectionRenderObject {
       TextPosition(offset: selection.end, affinity: selection.affinity),
       effectiveOffset: effectiveOffset,
       caretPrototype: _caretPrototype,
-      handleSpecialText: handleSpecialText,
     );
 
     _selectionEndInViewport.value =
@@ -1616,7 +1614,6 @@ class ExtendedRenderEditable extends ExtendedTextSelectionRenderObject {
         caretHeightCallBack: caretHeightCallBack,
         effectiveOffset: effectiveOffset,
         caretPrototype: _caretPrototype,
-        handleSpecialText: handleSpecialText,
       );
 
       final Offset start =
@@ -1922,7 +1919,6 @@ class ExtendedRenderEditable extends ExtendedTextSelectionRenderObject {
       caretHeightCallBack: caretHeightCallBack,
       effectiveOffset: effectiveOffset,
       caretPrototype: _caretPrototype,
-      handleSpecialText: handleSpecialText,
     );
 
     Rect caretRect = _caretPrototype.shift(caretOffset);
@@ -2350,4 +2346,8 @@ class ExtendedRenderEditable extends ExtendedTextSelectionRenderObject {
 
   @override
   Widget get overflowWidget => null;
+
+  @override
+  // TODO: implement caretPrototype
+  Rect get caretPrototype => throw UnimplementedError();
 }
